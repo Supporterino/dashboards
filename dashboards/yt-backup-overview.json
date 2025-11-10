@@ -1,0 +1,2257 @@
+{
+  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "yt-backup"
+  },
+  "spec": {
+    "annotations": {
+      "list": [
+        {
+          "$$hashKey": "object:195",
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 0,
+          "y": 0
+        },
+        "id": 6,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) FROM videos",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos monitored",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 3,
+          "y": 0
+        },
+        "id": 4,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Last 20 downloaded",
+            "url": "d/TElIAY3Wk?var-last=20"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) FROM `videos` WHERE downloaded IS NOT NULL",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "videos",
+            "timeColumn": "downloaded",
+            "timeColumnType": "datetime",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos in Archive",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 6,
+          "y": 0
+        },
+        "id": 29,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "show offline videos",
+            "url": "d/VhAww6qWz"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) as videos FROM videos WHERE online = 0 OR online = 3;",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos only in archive",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 9,
+          "y": 0
+        },
+        "id": 8,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Show queue",
+            "url": "d/-vDQFmeZz"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) FROM `videos` WHERE downloaded IS NULL AND download_required = 1 AND copyright IS NULL AND videos.online = 1",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos in Download Queue",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "s"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 12,
+          "y": 0
+        },
+        "id": 10,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT SUM(duration) FROM `operations` WHERE `operation_type` = 'download_videos'",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Time used downloading",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 2,
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "s"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 15,
+          "y": 0
+        },
+        "id": 11,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT SUM(duration) FROM `operations` WHERE `operation_type` = 'rclone_upload'",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Time used uploading",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 2,
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "s"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 18,
+          "y": 0
+        },
+        "id": 12,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT SUM(duration) FROM `operations` WHERE `operation_type` = 'get_video_infos' OR `operation_type` = 'get_playlists'",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Time used fetching metadata",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "done": {
+                    "index": 1,
+                    "text": "Done"
+                  }
+                },
+                "type": "value"
+              },
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "index": 0,
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 21,
+          "y": 0
+        },
+        "id": 22,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "center",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "/^statistic_value$/",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "value",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT statistic_value FROM statistics WHERE statistic_type = 'status' LIMIT 1",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "sql": {
+              "columns": [
+                {
+                  "parameters": [],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Status",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": "auto",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "video_count"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Videos monitored"
+                },
+                {
+                  "id": "unit",
+                  "value": "none"
+                },
+                {
+                  "id": "custom.align"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Percent"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Archived"
+                },
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "decimals",
+                  "value": 2
+                },
+                {
+                  "id": "custom.cellOptions",
+                  "value": {
+                    "type": "color-background"
+                  }
+                },
+                {
+                  "id": "custom.align",
+                  "value": "right"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "rgba(245, 54, 54, 0.9)",
+                        "value": null
+                      },
+                      {
+                        "color": "rgba(237, 129, 40, 0.89)",
+                        "value": 100
+                      },
+                      {
+                        "color": "rgba(50, 172, 45, 0.97)",
+                        "value": 60
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "downloaded_count"
+              },
+              "properties": [
+                {
+                  "id": "displayName",
+                  "value": "Videos downloaded"
+                },
+                {
+                  "id": "unit",
+                  "value": "none"
+                },
+                {
+                  "id": "custom.align"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "channel_name"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "short"
+                },
+                {
+                  "id": "decimals",
+                  "value": 2
+                },
+                {
+                  "id": "links",
+                  "value": [
+                    {
+                      "targetBlank": true,
+                      "title": "Video list for channel ${__cell}",
+                      "url": "/d/swQfGS3Wk/yt-backup-channel?orgId=1\u0026var-channel_name=${__cell}"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.align"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 16,
+          "w": 9,
+          "x": 0,
+          "y": 3
+        },
+        "id": 2,
+        "options": {
+          "cellHeight": "sm",
+          "footer": {
+            "countRows": false,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT * FROM `downloaded_and_available_videos_by_channel_with_percent`",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Channel stats",
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 6,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "always",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 9,
+          "x": 9,
+          "y": 3
+        },
+        "id": 14,
+        "options": {
+          "legend": {
+            "calcs": [
+              "mean",
+              "lastNotNull",
+              "max"
+            ],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "time_series",
+            "group": [
+              {
+                "params": [
+                  "1h",
+                  "0"
+                ],
+                "type": "time"
+              }
+            ],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT download_date AS time, number FROM `videos_downloaded_at_date` WHERE download_date \u003e \"2010-01-01 00:00:00\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "number"
+                  ],
+                  "type": "column"
+                },
+                {
+                  "params": [
+                    "avg"
+                  ],
+                  "type": "aggregate"
+                },
+                {
+                  "params": [
+                    "number"
+                  ],
+                  "type": "alias"
+                }
+              ]
+            ],
+            "table": "videos_downloaded_at_date",
+            "timeColumn": "download_date",
+            "timeColumnType": "date",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos downloaded per day",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "decimals": 0,
+            "displayName": "",
+            "mappings": [],
+            "unit": "none"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "resolution"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "pixel"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 13,
+          "w": 3,
+          "x": 18,
+          "y": 3
+        },
+        "id": 20,
+        "options": {
+          "displayLabels": [],
+          "legend": {
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true,
+            "values": [
+              "value"
+            ]
+          },
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "11.1.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) as videos,resolution FROM `videos` WHERE resolution IS NOT NULL GROUP BY resolution",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Video resolutions",
+        "transformations": [
+          {
+            "id": "merge",
+            "options": {
+              "reducers": []
+            }
+          }
+        ],
+        "type": "piechart"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 21,
+          "y": 3
+        },
+        "id": 26,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Show videos",
+            "url": "/d/V2u9f-qZk"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) as video_count FROM videos WHERE downloaded IS NULL AND download_required = 1 AND copyright IS NOT NULL",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Videos copyrighted",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "decbytes"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 21,
+          "y": 6
+        },
+        "id": 28,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT SUM(size) FROM videos WHERE downloaded \u003e= now() - INTERVAL 1 DAY;",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Downloaded last 24h",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "archive size",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 10,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "spanNulls": true,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "decbytes"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 9,
+          "x": 9,
+          "y": 9
+        },
+        "id": 16,
+        "options": {
+          "legend": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT statistic_date AS time, CAST(statistic_value AS SIGNED) AS archive_size FROM statistics WHERE statistic_type = 'archive_size';",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "statistics",
+            "timeColumn": "id",
+            "timeColumnType": "int",
+            "where": [
+              {
+                "name": "$__unixEpochFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Archive Size",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 21,
+          "y": 9
+        },
+        "id": 18,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "show unlisted videos",
+            "url": "d/6u9HVb6Wz"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) as videos FROM videos WHERE online = 4;",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Unlisted videos in archive",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 21,
+          "y": 12
+        },
+        "id": 30,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "show lost videos",
+            "url": "d/i1nC4beWk"
+          }
+        ],
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT COUNT(*) as videos FROM videos WHERE videos.downloaded IS NULL AND (videos.online = 0 OR videos.online = 3)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Lost videos",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 0,
+            "mappings": [
+              {
+                "$$hashKey": "object:450",
+                "id": 0,
+                "op": "=",
+                "text": "0",
+                "type": 1,
+                "value": "null"
+              }
+            ],
+            "max": 10000,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "#299c46",
+                  "value": null
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 7500
+                },
+                {
+                  "color": "#d44a3a",
+                  "value": 9000
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 4,
+          "w": 3,
+          "x": 21,
+          "y": 15
+        },
+        "id": 32,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "horizontal",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "limit": 10000,
+            "values": true
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT SUM(statistic_value) AS used_quota_last_24h\nFROM statistics\nWHERE statistics.statistic_type = 'used_quota' AND statistics.statistic_date \u003e DATE_SUB(NOW(), INTERVAL 1 DAY)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Quota used in last 24h",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "none"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 12,
+          "x": 9,
+          "y": 16
+        },
+        "id": 24,
+        "maxDataPoints": 100,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "first"
+            ],
+            "fields": "/^statistic_value$/",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT statistic_value FROM statistics WHERE statistic_type = 'currently_downloading' LIMIT 1",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "id"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "table": "operations",
+            "timeColumn": "operation_date",
+            "timeColumnType": "timestamp",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "title": "Currently Downloading",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "default": false,
+          "type": "mysql",
+          "uid": "ddws6ofufm9dsd"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "fixed"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 13,
+          "w": 9,
+          "x": 0,
+          "y": 19
+        },
+        "id": 33,
+        "options": {
+          "basemap": {
+            "config": {},
+            "name": "Layer 0",
+            "type": "default"
+          },
+          "controls": {
+            "mouseWheelZoom": true,
+            "showAttribution": true,
+            "showDebug": false,
+            "showMeasure": false,
+            "showScale": false,
+            "showZoom": true
+          },
+          "layers": [
+            {
+              "config": {
+                "showLegend": false,
+                "style": {
+                  "color": {
+                    "fixed": "blue"
+                  },
+                  "opacity": 0.4,
+                  "rotation": {
+                    "field": "video_count",
+                    "fixed": 0,
+                    "max": 360,
+                    "min": -360,
+                    "mode": "mod"
+                  },
+                  "size": {
+                    "field": "video_count",
+                    "fixed": 5,
+                    "max": 15,
+                    "min": 2
+                  },
+                  "symbol": {
+                    "fixed": "img/icons/marker/circle.svg",
+                    "mode": "fixed"
+                  },
+                  "symbolAlign": {
+                    "horizontal": "center",
+                    "vertical": "center"
+                  },
+                  "text": {
+                    "fixed": "",
+                    "mode": "field"
+                  },
+                  "textConfig": {
+                    "fontSize": 12,
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "textAlign": "center",
+                    "textBaseline": "middle"
+                  }
+                }
+              },
+              "filterData": {
+                "id": "byRefId",
+                "options": "A"
+              },
+              "location": {
+                "gazetteer": "public/gazetteer/countries.json",
+                "lookup": "country_code",
+                "mode": "lookup"
+              },
+              "name": "Video count",
+              "tooltip": true,
+              "type": "markers"
+            }
+          ],
+          "tooltip": {
+            "mode": "details"
+          },
+          "view": {
+            "allLayers": true,
+            "id": "coords",
+            "lat": 13.581921,
+            "lon": -12.65625,
+            "zoom": 2
+          }
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "ytbackup",
+            "datasource": {
+              "type": "mysql",
+              "uid": "ddws6ofufm9dsd"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  c.channel_country AS country_code,\n  COUNT(v.id) AS video_count\nFROM\n  ytbackup.videos v\n  JOIN ytbackup.playlists p ON v.playlist = p.id\n  JOIN ytbackup.channels c ON p.channel_id = c.id\nWHERE\n  v.downloaded IS NOT NULL\nGROUP BY\n  c.channel_country;",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "parameters": [
+                    {
+                      "name": "channel_country",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "parameters": [
+                    {
+                      "name": "channel_id",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "channels"
+          }
+        ],
+        "title": "Panel Title",
+        "type": "geomap"
+      }
+    ],
+    "refresh": "10s",
+    "schemaVersion": 42,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-7d",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "title": "YT Backup - Overview",
+    "weekStart": ""
+  }
+}
