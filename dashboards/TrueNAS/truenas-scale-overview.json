@@ -2657,7 +2657,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2750,7 +2750,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2843,7 +2843,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2932,7 +2932,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "services_io{instance=\"$instance\", service=~\"$services\", op=\"write\"}",
@@ -2949,7 +2949,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -5882,7 +5882,7 @@
         {
           "current": {
             "text": "Mimir",
-            "value": "wAqPzTA4k"
+            "value": "cf3sbzsrm6kn4c"
           },
           "label": "Data source",
           "name": "datasource",

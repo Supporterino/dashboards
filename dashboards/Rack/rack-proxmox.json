@@ -41,7 +41,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -347,7 +347,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -362,7 +362,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -377,7 +377,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -392,7 +392,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -407,7 +407,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -422,7 +422,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -437,7 +437,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -494,7 +494,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -576,7 +576,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "pve_cpu_usage_ratio{instance=\"$instance\"} and on(id) pve_node_info",
@@ -587,7 +587,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -620,7 +620,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -691,7 +691,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "pve_cpu_usage_ratio{instance=\"$instance\"} / pve_cpu_usage_limit and on(id) pve_node_info",
             "format": "time_series",
@@ -706,7 +706,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -770,7 +770,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -787,7 +787,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -870,7 +870,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "pve_memory_usage_bytes{instance=\"$instance\"} and on(id) pve_node_info",
@@ -881,7 +881,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -914,7 +914,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -984,7 +984,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "pve_memory_usage_bytes{instance=\"$instance\"} / pve_memory_size_bytes and on(id) pve_node_info",
             "format": "time_series",
@@ -999,7 +999,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1091,7 +1091,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -1105,7 +1105,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -1120,7 +1120,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -1152,7 +1152,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1240,7 +1240,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "((pve_cpu_usage_ratio{instance=\"$instance\"} / pve_cpu_usage_limit) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
             "format": "time_series",
@@ -1256,7 +1256,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1344,7 +1344,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "(pve_memory_usage_bytes{instance=\"$instance\"} / pve_memory_size_bytes * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
             "format": "time_series",
@@ -1360,7 +1360,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1428,7 +1428,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "pve_disk_usage_bytes{instance=\"$instance\", id=~\"storage/.+\"} / pve_disk_size_bytes * on (id, instance) group_left(storage) pve_storage_info",
@@ -1446,7 +1446,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1504,7 +1504,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -1539,7 +1539,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1630,7 +1630,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "pve_disk_usage_bytes{instance=\"$instance\"} / pve_disk_size_bytes{instance=\"$instance\"} * on (id, instance) group_left(name, type) pve_guest_info{type=\"lxc\"}",
@@ -1648,7 +1648,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1750,7 +1750,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "(rate(pve_network_receive_bytes{instance=\"$instance\"}[5m]) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
             "format": "time_series",
@@ -1762,7 +1762,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "(rate(pve_network_transmit_bytes{instance=\"$instance\"}[5m])* on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
             "format": "time_series",
@@ -1778,7 +1778,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1867,7 +1867,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "expr": "((rate(pve_disk_write_bytes{instance=\"$instance\"}[5m]) + rate(pve_disk_read_bytes[5m])) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
             "format": "time_series",
@@ -1894,7 +1894,7 @@
           "current": {},
           "datasource": {
             "type": "prometheus",
-            "uid": "wAqPzTA4k"
+            "uid": "cf3sbzsrm6kn4c"
           },
           "definition": "label_values(pve_node_info, instance)",
           "hide": 0,

@@ -29,7 +29,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -192,7 +192,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "node_cpu_scaling_frequency_hertz{instance=\"10.1.255.155:9100\"}",
@@ -208,7 +208,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg(node_cpu_scaling_frequency_max_hertz{instance=\"10.1.255.155:9100\"})",
@@ -224,7 +224,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg(node_cpu_scaling_frequency_min_hertz{instance=\"10.1.255.155:9100\"})",
@@ -244,7 +244,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -326,7 +326,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "node_hwmon_temp_celsius{instance=\"10.1.255.155:9100\"}",
@@ -341,7 +341,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {

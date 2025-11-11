@@ -29,7 +29,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -80,7 +80,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "count(redis_up{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"})",
@@ -95,7 +95,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -146,7 +146,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "sum(redis_connected_clients{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"})",
@@ -161,7 +161,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -216,7 +216,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg((redis_config_maxclients{env=~\"$env\"} - redis_connected_clients{env=~\"$env\"}) / redis_config_maxclients{env=~\"$env\"})",
@@ -231,7 +231,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -308,7 +308,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "increase(redis_commands_processed_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}[$__rate_interval])",
@@ -323,7 +323,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -374,7 +374,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "sum(redis_cluster_slots_fail{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"})",
@@ -389,7 +389,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -460,7 +460,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "count(redis_instance_info{namespace=~\"$namespace\",service=~\"$service\",role=\"master\",env=~\"$env\"})",
@@ -475,7 +475,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -528,7 +528,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg(redis_rdb_changes_since_last_save{env=~\"$env\"})",
@@ -543,7 +543,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -617,7 +617,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "topk(5, increase(redis_commands_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"} [$__rate_interval]))",
@@ -632,7 +632,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -707,7 +707,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg(irate(redis_commands_duration_seconds_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}[1m])) by (cmd)\n  /\navg(irate(redis_commands_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}[1m])) by (cmd)",
@@ -722,7 +722,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -798,7 +798,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "redis_db_keys{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}",
@@ -815,7 +815,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -891,7 +891,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "rate(redis_net_input_bytes_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}[$__rate_interval])",
@@ -908,7 +908,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -984,7 +984,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "rate(redis_net_output_bytes_total{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}[$__rate_interval])",
@@ -1001,7 +1001,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1077,7 +1077,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "redis_memory_used_bytes{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}",
@@ -1094,7 +1094,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1170,7 +1170,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "redis_connected_clients{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}",
@@ -1187,7 +1187,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1263,7 +1263,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "redis_master_repl_offset{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"} - redis_slave_repl_offset{namespace=~\"$namespace\",service=~\"$service\",env=~\"$env\"}",
@@ -1280,7 +1280,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1356,7 +1356,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "sum(redis_cluster_slots_ok{env=~\"$env\"})",
@@ -1367,7 +1367,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "sum(redis_cluster_slots_fail{env=~\"$env\"})",
@@ -1394,7 +1394,7 @@
           "current": {},
           "datasource": {
             "type": "prometheus",
-            "uid": "wAqPzTA4k"
+            "uid": "cf3sbzsrm6kn4c"
           },
           "definition": "label_values(redis_up, namespace)",
           "description": null,
@@ -1420,7 +1420,7 @@
           "current": {},
           "datasource": {
             "type": "prometheus",
-            "uid": "wAqPzTA4k"
+            "uid": "cf3sbzsrm6kn4c"
           },
           "definition": "label_values(redis_up, service)",
           "description": null,
@@ -1446,7 +1446,7 @@
           "current": {},
           "datasource": {
             "type": "prometheus",
-            "uid": "wAqPzTA4k"
+            "uid": "cf3sbzsrm6kn4c"
           },
           "definition": "label_values(up,env)",
           "description": null,

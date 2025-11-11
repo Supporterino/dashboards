@@ -29,7 +29,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "cf3sbzsrm6kn4c"
+          "uid": "cf3sbzsrm6kn4c6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -123,8 +123,7 @@
       },
       {
         "datasource": {
-          "type": "prometheus",
-          "uid": "cf3sbzsrm6kn4c"
+          "type": cf3sbzsrm6kn4cus","uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -206,129 +205,127 @@
         "pluginVersion": "12.2.1",
         "targets": [
           {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "wAqPzTA4k"
-            },
-            "editorMode": "code",
-            "expr": "homeassistant_sensor_temperature_celsius",
-            "legendFormat": "{{friendly_name}}",
-            "range": true,
-            "refId": "A"
+            "datasourccf3sbzsrm6kn4c"type": "prometheus",
+            "uid": "wAqPzTA4k"
+          },
+          "editorMode": "code",
+          "expr": "homeassistant_sensor_temperature_celsius",
+          "legendFormat": "{{friendly_name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Temperature",
+      "type": "timeseries"
+    },
+    {
+        "datasourccf3sbzsrm6kn4c"type": "prometheus",
+      "uid": "cf3sbzsrm6kn4c"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisBorderShow": false,
+          "axisCenteredZero": false,
+          "axisColorMode": "text",
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "barWidthFactor": 0.6,
+          "drawStyle": "line",
+          "fillOpacity": 0,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "insertNulls": false,
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "auto",
+          "showValues": false,
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
           }
-        ],
-        "title": "Temperature",
-        "type": "timeseries"
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": 0
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "ppm"
       },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 12,
+      "x": 0,
+      "y": 12
+    },
+    "id": 3,
+    "options": {
+      "legend": {
+        "calcs": [],
+        "displayMode": "list",
+        "placement": "bottom",
+        "showLegend": true
+      },
+      "tooltip": {
+        "hideZeros": false,
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "12.2.1",
+    "targets": [
       {
-        "datasource": {
-          "type": "prometheus",
-          "uid": "cf3sbzsrm6kn4c"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "ppm"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 12
-        },
-        "id": 3,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.2.1",
-        "targets": [
-          {
-            "editorMode": "code",
-            "expr": "homeassistant_sensor_pm25_u0xb5g_per_mu0xb3",
-            "legendFormat": "{{friendly_name}}",
-            "range": true,
-            "refId": "A"
-          }
-        ],
-        "title": "PM2.5",
-        "type": "timeseries"
+        "editorMode": "code",
+        "expr": "homeassistant_sensor_pm25_u0xb5g_per_mu0xb3",
+        "legendFormat": "{{friendly_name}}",
+        "range": true,
+        "refId": "A"
       }
     ],
-    "preload": false,
-    "refresh": "",
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": []
-    },
-    "time": {
-      "from": "now-6h",
-      "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "browser",
-    "title": "Home Overview"
+    "title": "PM2.5",
+    "type": "timeseries"
   }
+],
+"preload": false,
+"refresh": "",
+"schemaVersion": 42,
+"tags": [],
+"templating": {
+  "list": []
+},
+"time": {
+  "from": "now-6h",
+  "to": "now"
+},
+"timepicker": {},
+"timezone": "browser",
+"title": "Home Overview"
+}
 }

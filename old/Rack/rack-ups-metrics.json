@@ -51,7 +51,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -129,7 +129,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": false,
             "expr": "nut_status{ups=~\"${ups:pipe}\"}",
@@ -145,7 +145,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -194,7 +194,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": true,
@@ -211,7 +211,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -271,7 +271,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": false,
@@ -288,7 +288,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -348,7 +348,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": true,
@@ -365,7 +365,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -420,7 +420,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1h]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -469,7 +469,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -524,7 +524,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1d]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -573,7 +573,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -628,7 +628,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1d]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -677,7 +677,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -734,7 +734,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "nut_battery_runtime_seconds{ups=~\"${ups:pipe}\"}",
@@ -750,7 +750,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -809,7 +809,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1h]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -822,7 +822,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "$Preis",
@@ -870,7 +870,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -929,7 +929,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1d]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -942,7 +942,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "$Preis",
@@ -986,7 +986,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "days_in_month()",
@@ -1003,7 +1003,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -1062,7 +1062,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[1d]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -1075,7 +1075,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "$Preis",
@@ -1123,7 +1123,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1208,7 +1208,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_battery_runtime_seconds{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1223,7 +1223,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1304,7 +1304,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "nut_load{$ups=\"$ups\"} * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -1315,7 +1315,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_load{$ups=\"$ups\"}[$smoothing_interval]) * nut_real_power_nominal_watts{$ups=\"$ups\"}",
@@ -1332,7 +1332,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1417,7 +1417,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_load{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1433,7 +1433,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1580,7 +1580,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "100 * avg_over_time(nut_battery_charge{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1591,7 +1591,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": true,
@@ -1605,7 +1605,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "avg_over_time(nut_temperature_celsius{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1622,7 +1622,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1708,7 +1708,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_input_voltage_volts{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1723,7 +1723,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1870,7 +1870,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "exemplar": true,
@@ -1888,7 +1888,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -1976,7 +1976,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_input_frequency_hertz{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -1991,7 +1991,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -2077,7 +2077,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_output_voltage_volts{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -2092,7 +2092,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2227,7 +2227,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": false,
             "expr": "nut_ups_info{ups=~\"${ups:pipe}\"}",
@@ -2267,7 +2267,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "description": "",
         "fieldConfig": {
@@ -2355,7 +2355,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "exemplar": true,
             "expr": "avg_over_time(nut_output_frequency_hertz{ups=~\"${ups:pipe}\"}[$smoothing_interval])",
@@ -2383,7 +2383,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2475,7 +2475,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "sum(sum_over_time(\n  (nut_load{ups=\"$ups\"} * nut_real_power_nominal_watts{ups=\"$ups\"})[1d:1m]\n) / 60) by (ups)",
@@ -2494,7 +2494,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2586,7 +2586,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "sum(sum_over_time(\n  (nut_load{ups=\"$ups\"} * nut_real_power_nominal_watts{ups=\"$ups\"})[1w:1m]\n) / 60 ) by (ups)",
@@ -2605,7 +2605,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2697,7 +2697,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "sum(sum_over_time(\n  (nut_load{ups=\"$ups\"} * nut_real_power_nominal_watts{ups=\"$ups\"})[1d:1m]\n) / 60 * $Preis / 1000) by (ups)",
@@ -2716,7 +2716,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -2808,7 +2808,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "sum(sum_over_time(\n  (nut_load{ups=\"$ups\"} * nut_real_power_nominal_watts{ups=\"$ups\"})[1w:1m]\n) / 60 * $Preis / 1000) by (ups)",
@@ -2845,7 +2845,7 @@
           },
           "datasource": {
             "type": "prometheus",
-            "uid": "wAqPzTA4k"
+            "uid": "cf3sbzsrm6kn4c"
           },
           "definition": "nut_ups_info",
           "hide": 0,
