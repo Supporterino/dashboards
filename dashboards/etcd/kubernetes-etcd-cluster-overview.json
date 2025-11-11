@@ -54,7 +54,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "gridPos": {
           "h": 1,
@@ -68,7 +68,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "refId": "A"
           }
@@ -1029,7 +1029,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "gridPos": {
           "h": 1,
@@ -1043,7 +1043,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "refId": "A"
           }
@@ -1444,7 +1444,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "gridPos": {
           "h": 1,
@@ -1458,7 +1458,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "refId": "A"
           }
@@ -1765,7 +1765,7 @@
         "collapsed": false,
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "gridPos": {
           "h": 1,
@@ -1779,7 +1779,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "refId": "A"
           }
@@ -3493,8 +3493,8 @@
         {
           "current": {
             "selected": false,
-            "text": "wAqPzTA4k",
-            "value": "wAqPzTA4k"
+            "text": "cf3sbzsrm6kn4c",
+            "value": "cf3sbzsrm6kn4c"
           },
           "description": null,
           "error": null,

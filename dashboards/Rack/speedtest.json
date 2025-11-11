@@ -145,7 +145,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -239,7 +239,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "max(speedtest_ping_latency_seconds) by (job)",
@@ -256,7 +256,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -354,7 +354,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -447,7 +447,7 @@
       {
         "datasource": {
           "type": "prometheus",
-          "uid": "wAqPzTA4k"
+          "uid": "cf3sbzsrm6kn4c"
         },
         "fieldConfig": {
           "defaults": {
@@ -541,7 +541,7 @@
           {
             "datasource": {
               "type": "prometheus",
-              "uid": "wAqPzTA4k"
+              "uid": "cf3sbzsrm6kn4c"
             },
             "editorMode": "code",
             "expr": "max(speedtest_upload_bytes_second) by (server_name, server_location, server_host, server_country) / 125000",
@@ -637,7 +637,7 @@
         {
           "current": {
             "text": "Mimir",
-            "value": "wAqPzTA4k"
+            "value": "cf3sbzsrm6kn4c"
           },
           "label": "Data source",
           "name": "datasource",
