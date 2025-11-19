@@ -80,7 +80,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -141,7 +141,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -202,7 +202,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -271,7 +271,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -331,13 +331,14 @@
             "fields": "",
             "values": false
           },
+          "sort": "desc",
           "tooltip": {
             "hideZeros": false,
             "mode": "multi",
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -397,6 +398,7 @@
                 "type": "linear"
               },
               "showPoints": "auto",
+              "showValues": false,
               "spanNulls": false,
               "stacking": {
                 "group": "A",
@@ -444,7 +446,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -526,7 +528,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -622,7 +624,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -718,7 +720,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -792,6 +794,7 @@
                 "type": "linear"
               },
               "showPoints": "auto",
+              "showValues": false,
               "spanNulls": false,
               "stacking": {
                 "group": "A",
@@ -888,7 +891,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -955,6 +958,9 @@
                 "type": "auto"
               },
               "filterable": true,
+              "footer": {
+                "reducers": []
+              },
               "inspect": false
             },
             "mappings": [],
@@ -1068,18 +1074,16 @@
         "id": 11,
         "options": {
           "cellHeight": "sm",
-          "footer": {
-            "countRows": false,
-            "fields": "",
-            "reducer": [
-              "sum"
-            ],
-            "show": false
-          },
           "frameIndex": 6,
-          "showHeader": true
+          "showHeader": true,
+          "sortBy": [
+            {
+              "desc": true,
+              "displayName": "Watt"
+            }
+          ]
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1335,7 +1339,7 @@
           "xTickLabelRotation": 0,
           "xTickLabelSpacing": 100
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "datasource": {
@@ -1403,6 +1407,7 @@
                 "type": "linear"
               },
               "showPoints": "auto",
+              "showValues": false,
               "spanNulls": false,
               "stacking": {
                 "group": "A",
@@ -1450,7 +1455,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1497,6 +1502,7 @@
                 "type": "linear"
               },
               "showPoints": "auto",
+              "showValues": false,
               "spanNulls": false,
               "stacking": {
                 "group": "A",
@@ -1541,7 +1547,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.1.0",
+        "pluginVersion": "12.2.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1584,7 +1590,7 @@
             "query": "label_values(shelly_device_info,device_name)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
-          "refresh": 1,
+          "refresh": 2,
           "regex": "",
           "type": "query"
         },
@@ -1593,9 +1599,7 @@
           "allowCustomValue": false,
           "current": {
             "text": "All",
-            "value": [
-              "$__all"
-            ]
+            "value": "$__all"
           },
           "definition": "label_values(shelly_device_info{device_name=~\"$shelly\"},device_mac)",
           "includeAll": true,
