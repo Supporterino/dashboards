@@ -1348,7 +1348,7 @@
             },
             "editorMode": "code",
             "exemplar": false,
-            "expr": "sum(\n  (\n    (\n      sum(shelly_switch_energy{device_mac=~\"$device\"})\n      by (device_mac)\n      -\n      sum(shelly_switch_energy{device_mac=~\"$device\"}  offset ${__to:date:HH}h)\n      by (device_mac)\n    )\n    or\n    sum(shelly_switch_energy{device_mac=~\"$device\"})\n    by (device_mac)\n  )\n  * on(device_mac) group_left(device_name) shelly_device_info\n)\nby (device_name)\n",
+            "expr": "sum(\n  (\n    (\n      sum(shelly_switch_energy{device_mac=~\"$device\"})\n      by (device_mac)\n      -\n      sum(shelly_switch_energy{device_mac=~\"$device\"}  offset ${__to:date:HH}h${__to:date:mm}m)\n      by (device_mac)\n    )\n    or\n    sum(shelly_switch_energy{device_mac=~\"$device\"})\n    by (device_mac)\n  )\n  * on(device_mac) group_left(device_name) shelly_device_info\n)\nby (device_name)\n",
             "hide": false,
             "instant": true,
             "legendFormat": "__auto",
