@@ -80,7 +80,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -141,7 +141,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -202,7 +202,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -271,7 +271,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -338,7 +338,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -446,7 +446,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -528,7 +528,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -624,7 +624,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -720,7 +720,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -891,7 +891,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1083,7 +1083,7 @@
             }
           ]
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1339,7 +1339,7 @@
           "xTickLabelRotation": 0,
           "xTickLabelSpacing": 100
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "datasource": {
@@ -1452,7 +1452,7 @@
           "xTickLabelRotation": 0,
           "xTickLabelSpacing": 100
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "datasource": {
@@ -1565,7 +1565,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1664,7 +1664,7 @@
             "sort": "desc"
           }
         },
-        "pluginVersion": "12.2.1",
+        "pluginVersion": "12.3.1",
         "targets": [
           {
             "editorMode": "code",
@@ -1712,7 +1712,9 @@
           "allowCustomValue": false,
           "current": {
             "text": "All",
-            "value": "$__all"
+            "value": [
+              "$__all"
+            ]
           },
           "definition": "label_values(shelly_device_info{device_name=~\"$shelly\"},device_mac)",
           "includeAll": true,
@@ -1801,19 +1803,19 @@
         },
         {
           "current": {
-            "text": "0.279",
-            "value": "0.279"
+            "text": "0.266",
+            "value": "0.266"
           },
           "label": "Preis (pro kWh)",
           "name": "Preis",
           "options": [
             {
               "selected": true,
-              "text": "0.279",
-              "value": "0.279"
+              "text": "0.266",
+              "value": "0.266"
             }
           ],
-          "query": "0.279",
+          "query": "0.266",
           "type": "textbox"
         }
       ]
