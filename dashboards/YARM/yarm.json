@@ -69,24 +69,99 @@
           "allValue": ".*",
           "allowCustomValue": false,
           "current": {
-            "text": "",
-            "value": ""
+            "text": "All",
+            "value": "$__all"
           },
           "datasource": {
             "type": "prometheus",
             "uid": "${datasource}"
           },
-          "definition": "label_values(http_server_duration_count{service=\"$service\"},http_method)",
+          "definition": "label_values(http_server_duration_bucket{service=\"$service\"},http_method)",
           "includeAll": true,
           "multi": true,
           "name": "method",
           "options": [],
           "query": {
             "qryType": 1,
-            "query": "label_values(http_server_duration_count{service=\"$service\"},http_method)",
+            "query": "label_values(http_server_duration_bucket{service=\"$service\"},http_method)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
-          "refresh": 1,
+          "refresh": 2,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "allValue": ".*",
+          "allowCustomValue": false,
+          "current": {
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "definition": "label_values(http_server_duration_bucket{service=\"$service\"},net_host_port)",
+          "includeAll": true,
+          "multi": true,
+          "name": "port",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values(http_server_duration_bucket{service=\"$service\"},net_host_port)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 2,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "allValue": ".*",
+          "allowCustomValue": false,
+          "current": {
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "definition": "label_values(http_server_duration_bucket{service=\"$service\"},http_status_code)",
+          "includeAll": true,
+          "multi": true,
+          "name": "status",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values(http_server_duration_bucket{service=\"$service\"},http_status_code)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 2,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "allValue": ".*",
+          "allowCustomValue": false,
+          "current": {
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "definition": "label_values(http_client_duration_bucket{service=\"$service\"},net_peer_name)",
+          "includeAll": true,
+          "multi": true,
+          "name": "peer",
+          "options": [],
+          "query": {
+            "qryType": 1,
+            "query": "label_values(http_client_duration_bucket{service=\"$service\"},net_peer_name)",
+            "refId": "PrometheusVariableQueryEditor-VariableQuery"
+          },
+          "refresh": 2,
           "regex": "",
           "type": "query"
         }
