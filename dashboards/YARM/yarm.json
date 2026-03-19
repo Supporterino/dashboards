@@ -170,7 +170,7 @@
         "type": "piechart"
       },
       {
-        "collapsed": true,
+        "collapsed": false,
         "gridPos": {
           "h": 1,
           "w": 24,
@@ -178,772 +178,507 @@
           "y": 9
         },
         "id": 4,
-        "panels": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 0,
-              "y": 1
-            },
-            "id": 1,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.50, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Server Latency (50th quantile) – $method @ $port",
-            "type": "histogram"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 12,
-              "y": 1
-            },
-            "id": 7,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.50, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Client Latency (50th quantile) – $peer",
-            "type": "histogram"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 0,
-              "y": 9
-            },
-            "id": 2,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Server Latency (95th quantile) – $method @ $port",
-            "type": "histogram"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 12,
-              "y": 9
-            },
-            "id": 8,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.95, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Client Latency (95th quantile) – $peer",
-            "type": "histogram"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 0,
-              "y": 17
-            },
-            "id": 3,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Server Latency (99th quantile) – $method @ $port",
-            "type": "histogram"
-          },
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "fillOpacity": 80,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "lineWidth": 1,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "orange",
-                      "value": 200
-                    },
-                    {
-                      "color": "red",
-                      "value": 500
-                    }
-                  ]
-                },
-                "unit": "ms"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 12,
-              "y": 17
-            },
-            "id": 9,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "histogram_quantile(0.99, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
-                "legendFormat": "__auto",
-                "range": true,
-                "refId": "A"
-              }
-            ],
-            "title": "HTTP Client Latency (99th quantile) – $peer",
-            "type": "histogram"
-          }
-        ],
+        "panels": [],
         "title": "HTTP Latency",
         "type": "row"
       },
       {
-        "collapsed": true,
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
         "gridPos": {
-          "h": 1,
-          "w": 24,
+          "h": 8,
+          "w": 12,
           "x": 0,
           "y": 10
         },
-        "id": 6,
-        "panels": [
-          {
-            "datasource": {
-              "type": "prometheus",
-              "uid": "${datasource}"
-            },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "axisBorderShow": false,
-                  "axisCenteredZero": false,
-                  "axisColorMode": "text",
-                  "axisLabel": "",
-                  "axisPlacement": "auto",
-                  "barAlignment": 0,
-                  "barWidthFactor": 0.6,
-                  "drawStyle": "line",
-                  "fillOpacity": 0,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "insertNulls": false,
-                  "lineInterpolation": "linear",
-                  "lineWidth": 1,
-                  "pointSize": 5,
-                  "scaleDistribution": {
-                    "type": "linear"
-                  },
-                  "showPoints": "auto",
-                  "showValues": false,
-                  "spanNulls": false,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  },
-                  "thresholdsStyle": {
-                    "mode": "off"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "red",
-                      "value": 80
-                    }
-                  ]
-                },
-                "unit": "reqps"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 0,
-              "y": 26
-            },
-            "id": 5,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m]))",
-                "legendFormat": "Total",
-                "range": true,
-                "refId": "A"
-              },
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\", http_status_code=~\"2[0-9][0-9]|3[0-9][0-9]\"}[5m]))",
-                "hide": false,
-                "instant": false,
-                "legendFormat": "2xx|3xx",
-                "range": true,
-                "refId": "B"
-              },
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\", http_status_code=~\"4[0-9][0-9]|5[0-9][0-9]\"}[5m]))",
-                "hide": false,
-                "instant": false,
-                "legendFormat": "4xx|5xx",
-                "range": true,
-                "refId": "C"
-              }
-            ],
-            "title": "HTTP Server Throughput – $method @ $port",
-            "type": "timeseries"
+        "id": 1,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
           },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
           {
             "datasource": {
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "fieldConfig": {
-              "defaults": {
-                "color": {
-                  "mode": "palette-classic"
-                },
-                "custom": {
-                  "axisBorderShow": false,
-                  "axisCenteredZero": false,
-                  "axisColorMode": "text",
-                  "axisLabel": "",
-                  "axisPlacement": "auto",
-                  "barAlignment": 0,
-                  "barWidthFactor": 0.6,
-                  "drawStyle": "line",
-                  "fillOpacity": 0,
-                  "gradientMode": "none",
-                  "hideFrom": {
-                    "legend": false,
-                    "tooltip": false,
-                    "viz": false
-                  },
-                  "insertNulls": false,
-                  "lineInterpolation": "linear",
-                  "lineWidth": 1,
-                  "pointSize": 5,
-                  "scaleDistribution": {
-                    "type": "linear"
-                  },
-                  "showPoints": "auto",
-                  "showValues": false,
-                  "spanNulls": false,
-                  "stacking": {
-                    "group": "A",
-                    "mode": "none"
-                  },
-                  "thresholdsStyle": {
-                    "mode": "off"
-                  }
-                },
-                "mappings": [],
-                "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                    {
-                      "color": "green",
-                      "value": 0
-                    },
-                    {
-                      "color": "red",
-                      "value": 80
-                    }
-                  ]
-                },
-                "unit": "reqps"
-              },
-              "overrides": []
-            },
-            "gridPos": {
-              "h": 8,
-              "w": 12,
-              "x": 12,
-              "y": 26
-            },
-            "id": 10,
-            "options": {
-              "legend": {
-                "calcs": [],
-                "displayMode": "list",
-                "placement": "bottom",
-                "showLegend": true
-              },
-              "tooltip": {
-                "hideZeros": false,
-                "mode": "single",
-                "sort": "none"
-              }
-            },
-            "pluginVersion": "12.3.1",
-            "targets": [
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\"}[5m]))",
-                "legendFormat": "Total",
-                "range": true,
-                "refId": "A"
-              },
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\", http_status_code=~\"2[0-9][0-9]|3[0-9][0-9]\"}[5m]))",
-                "hide": false,
-                "instant": false,
-                "legendFormat": "2xx|3xx",
-                "range": true,
-                "refId": "B"
-              },
-              {
-                "datasource": {
-                  "type": "prometheus",
-                  "uid": "${datasource}"
-                },
-                "editorMode": "code",
-                "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\", http_status_code=~\"4[0-9][0-9]|5[0-9][0-9]\"}[5m]))",
-                "hide": false,
-                "instant": false,
-                "legendFormat": "4xx|5xx",
-                "range": true,
-                "refId": "C"
-              }
-            ],
-            "title": "HTTP Client Throughput – ",
-            "type": "timeseries"
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.50, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
           }
         ],
-        "title": "HTTP Throughput",
-        "type": "row"
+        "title": "HTTP Server Latency (50th quantile) – $method @ $port",
+        "type": "histogram"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 10
+        },
+        "id": 7,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.50, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "HTTP Client Latency (50th quantile) – $peer",
+        "type": "histogram"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 18
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.95, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "HTTP Server Latency (95th quantile) – $method @ $port",
+        "type": "histogram"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 18
+        },
+        "id": 8,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.95, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "HTTP Client Latency (95th quantile) – $peer",
+        "type": "histogram"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 26
+        },
+        "id": 3,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.99, sum(rate(http_server_duration_bucket{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "HTTP Server Latency (99th quantile) – $method @ $port",
+        "type": "histogram"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "fillOpacity": 80,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "orange",
+                  "value": 200
+                },
+                {
+                  "color": "red",
+                  "value": 500
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 26
+        },
+        "id": 9,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "histogram_quantile(0.99, sum(rate(http_client_duration_bucket{net_peer_name=~\"$peer\", service=~\"$service\"}[5m])) by (le))",
+            "legendFormat": "__auto",
+            "range": true,
+            "refId": "A"
+          }
+        ],
+        "title": "HTTP Client Latency (99th quantile) – $peer",
+        "type": "histogram"
       },
       {
         "collapsed": false,
@@ -951,7 +686,270 @@
           "h": 1,
           "w": 24,
           "x": 0,
-          "y": 11
+          "y": 34
+        },
+        "id": 6,
+        "panels": [],
+        "title": "HTTP Throughput",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "reqps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 35
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\"}[5m]))",
+            "legendFormat": "Total",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\", http_status_code=~\"2[0-9][0-9]|3[0-9][0-9]\"}[5m]))",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "2xx|3xx",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_server_duration_count{service=~\"$service\", http_method=~\"$method\", net_host_port=~\"$port\", http_status_code=~\"4[0-9][0-9]|5[0-9][0-9]\"}[5m]))",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "4xx|5xx",
+            "range": true,
+            "refId": "C"
+          }
+        ],
+        "title": "HTTP Server Throughput – $method @ $port",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${datasource}"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "reqps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 35
+        },
+        "id": 10,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.1",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\"}[5m]))",
+            "legendFormat": "Total",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\", http_status_code=~\"2[0-9][0-9]|3[0-9][0-9]\"}[5m]))",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "2xx|3xx",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "${datasource}"
+            },
+            "editorMode": "code",
+            "expr": "sum(rate(http_client_duration_count{service=~\"$service\", net_peer_name=~\"$peer\", http_status_code=~\"4[0-9][0-9]|5[0-9][0-9]\"}[5m]))",
+            "hide": false,
+            "instant": false,
+            "legendFormat": "4xx|5xx",
+            "range": true,
+            "refId": "C"
+          }
+        ],
+        "title": "HTTP Client Throughput – ",
+        "type": "timeseries"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 43
         },
         "id": 15,
         "panels": [],
@@ -1021,7 +1019,7 @@
           "h": 9,
           "w": 8,
           "x": 0,
-          "y": 12
+          "y": 44
         },
         "id": 12,
         "options": {
@@ -1133,7 +1131,7 @@
           "h": 9,
           "w": 8,
           "x": 8,
-          "y": 12
+          "y": 44
         },
         "id": 13,
         "options": {
@@ -1245,7 +1243,7 @@
           "h": 9,
           "w": 8,
           "x": 16,
-          "y": 12
+          "y": 44
         },
         "id": 14,
         "options": {
