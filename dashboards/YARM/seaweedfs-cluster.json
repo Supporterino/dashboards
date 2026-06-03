@@ -2647,10 +2647,12 @@
                       "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "sum by (type) (SeaweedFS_s3_request_total{type=~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"})*0.000005",
+                        "editorMode": "code",
+                        "expr": "sum by (type) (increase(SeaweedFS_s3_request_total{type=~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"}[$__range]))*0.000005",
                         "format": "time_series",
                         "intervalFactor": 2,
                         "legendFormat": "{{type}} requests",
+                        "range": true,
                         "step": 30
                       },
                       "version": "v0"
@@ -2669,10 +2671,12 @@
                       "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "sum (SeaweedFS_s3_request_total{type=~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"})*0.000005",
+                        "editorMode": "code",
+                        "expr": "sum (increase(SeaweedFS_s3_request_total{type=~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"}[$__range]))*0.000005",
                         "format": "time_series",
                         "intervalFactor": 2,
                         "legendFormat": "All PUT, COPY, POST, LIST",
+                        "range": true,
                         "step": 30
                       },
                       "version": "v0"
@@ -2691,10 +2695,12 @@
                       "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "sum (SeaweedFS_s3_request_total{type!~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"})*0.0000004",
+                        "editorMode": "code",
+                        "expr": "sum (increase(SeaweedFS_s3_request_total{type!~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"}[$__range]))*0.0000004",
                         "format": "time_series",
                         "intervalFactor": 2,
-                        "legendFormat": "GET and all other"
+                        "legendFormat": "GET and all other",
+                        "range": true
                       },
                       "version": "v0"
                     },
@@ -2712,10 +2718,12 @@
                       "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "sum by (type) (SeaweedFS_s3_request_total{type!~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"})*0.0000004",
+                        "editorMode": "code",
+                        "expr": "sum by (type) (increase(SeaweedFS_s3_request_total{type!~'PUT|COPY|POST|LIST', namespace=\"$NAMESPACE\"}[$__range]))*0.0000004",
                         "format": "time_series",
                         "intervalFactor": 2,
-                        "legendFormat": "{{type}} requests"
+                        "legendFormat": "{{type}} requests",
+                        "range": true
                       },
                       "version": "v0"
                     },
